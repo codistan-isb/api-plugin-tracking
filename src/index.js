@@ -24,18 +24,18 @@ const io = require("socket.io")(6397, {
 //var host = '13.52.55.53';
 
 
-(async () => {
-  console.log(`Connecting to Redis server at ${host}`);
-  redisClient = redis.createClient({
-    socket: {
-      host: host,
-      port: 6379,
-      connect_timeout: 5000,
-    },
-  });
-  redisClient.on("error", (error) => console.error(`Error ${host} : ${error}`));
-  await redisClient.connect();
-})();
+// (async () => {
+//   console.log(`Connecting to Redis server at ${host}`);
+//   redisClient = redis.createClient({
+//     socket: {
+//       host: host,
+//       port: 6379,
+//       connect_timeout: 5000,
+//     },
+//   });
+//   redisClient.on("error", (error) => console.error(`Error ${host} : ${error}`));
+//   await redisClient.connect();
+// })();
 function trackingStartUp(context) {
   console.log("here startup");
   // client.on('error', (err) => {
@@ -43,7 +43,7 @@ function trackingStartUp(context) {
   // });
   // console.log("branchModel", branchModel);
   // console.log("client ", client);
-  console.log("redisClient", redisClient);
+  // console.log("redisClient", redisClient);
   // io.on("connection", async (socket) => {
   //   console.log("socket", socket);
   // })
